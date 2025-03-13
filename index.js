@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 app.use(json());
-
+app.set('trust proxy', 1);
 const windowMs = 5 * 60 * 1000;
 const limiter = rateLimit({
   windowMs,

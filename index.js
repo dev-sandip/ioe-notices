@@ -13,7 +13,7 @@ app.use(json());
 const windowMs = 5 * 60 * 1000;
 const limiter = rateLimit({
   windowMs,
-  max: 10,
+  max: 100,
   message: `Too many requests from this IP, please try again after ${windowMs / 60000} minutes`
 });
 app.use(limiter);
